@@ -19,17 +19,23 @@ export default function Contact() {
         console.error("Errore nella notifica a Marco:", error.text);
       });
 
-    // 2. Autorisposta al cliente
-    emailjs
-      .sendForm("service_axy7m8k", "template_exdpz39", form.current, "qLMuqXSmB-GNKT18D")
-      .then(() => {
-        console.log("Autorisposta inviata");
-        setSent(true);
-        form.current.reset();
-      })
-      .catch((error) => {
-        console.error("Errore nell'autorisposta:", error.text);
-      });
+    // 2. Autorisposta al cliente SOLO se non già inviata
+    if (!localStorage.getItem("autoReplySent")) {
+      emailjs
+        .sendForm("service_axy7m8k", "template_exdpz39", form.current, "qLMuqXSmB-GNKT18D")
+        .then(() => {
+          console.log("Autorisposta inviata");
+          localStorage.setItem("autoReplySent", "true");
+          setSent(true);
+          form.current.reset();
+        })
+        .catch((error) => {
+          console.error("Errore nell'autorisposta:", error.text);
+        });
+    } else {
+      setSent(true);
+      form.current.reset();
+    }
   };
 
   return (
