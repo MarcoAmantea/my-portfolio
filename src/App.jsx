@@ -9,6 +9,7 @@ import Support from './pages/Support';
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Services from './pages/Services';
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -30,7 +31,7 @@ useEffect(() => {
 
   return (
  <Router>
-      
+      <ScrollToTop />
 
       <div className="min-h-screen pt-20 flex flex-col">
         <Navbar />

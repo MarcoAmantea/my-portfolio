@@ -71,19 +71,7 @@ export default function Services() {
           </p>
         </motion.div>
 
-        {/* Consulenze */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transition"
-        >
-          <FaUser className="text-4xl text-marca-azione mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Consulenze & Restyling</h3>
-          <p className="text-sm mb-2">
-            Analisi del tuo sito attuale e proposte di miglioramento tecnico,
-            visivo e strategico.
-          </p>
-          <p className="text-sm text-marca-titolo font-bold">Da 50€/ora</p>
-        </motion.div>
+       
       </div>
 
       <div className="text-center mt-12">
