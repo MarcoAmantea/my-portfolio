@@ -17,9 +17,9 @@ export default function About() {
       {/* Bio breve */}
       <motion.p
         className="text-lg text-gray-700 text-center mb-12"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
         Sono Marco, uno sviluppatore front-end e web designer con uno stile creativo e una formazione artistica.  
         Amo i progetti che uniscono tecnologia, emozione e impatto visivo 🎨💡

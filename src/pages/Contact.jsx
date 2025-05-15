@@ -40,7 +40,14 @@ export default function Contact() {
 
   return (
     <div className="px-6 py-10 max-w-xl mx-auto">
-      <h1 className="text-4xl font-bold text-center text-marca-titolo mb-6">Contattami</h1>
+      <motion.h1
+        className="text-4xl font-bold text-center text-marca-titolo mb-8"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Contattami
+      </motion.h1>
       {sent && (
         <motion.div
           initial={{ opacity: 0 }}

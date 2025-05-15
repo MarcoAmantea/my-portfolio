@@ -4,7 +4,14 @@ import { motion } from 'framer-motion';
 export default function Portfolio() {
   return (
     <div className="px-6 py-10">
-      <h1 className="text-4xl font-bold text-center text-marca-titolo mb-10">Portfolio</h1>
+     <motion.h1
+        className="text-4xl font-bold text-center text-marca-titolo mb-8"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Portfolio
+      </motion.h1>
 <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
